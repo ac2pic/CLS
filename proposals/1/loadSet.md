@@ -30,10 +30,10 @@ Allow users to create a set of mods referenceable by a name.
 ## Format Proposal
 
 
-## `load-sets.json`
-At the root of the CrossCode installation, there will be a file named `load-sets.json`. This will contain information about where all Load Sets are located relative to the root directory.
+## > Example Files
 
-### Example File
+### `load-sets.json`
+At the root of the CrossCode installation, there will be a file named `load-sets.json`. This will contain information about where all Load Sets are located relative to the root directory.
 
 ```js
 {
@@ -52,7 +52,7 @@ Note: To keep backwards compatibility, `default` should always point to `/assets
 
 Note: Mod paths beginning with `/assets/mod-archive/` are only examples. They are not a requirement.
 
-## `mods.json`
+### `mods.json`
 
 Each named load set path will have a file name `mods.json` at the root. For example, the file `/assets/mods/mod.json` will be linked to `default` load set.
 
