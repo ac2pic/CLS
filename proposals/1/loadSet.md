@@ -49,14 +49,14 @@ Folder structure
 
 `/assets/load-set/{name}-mods/` is the `{name}` load set.
 
-## Advantages
+### Advantages
 
 - Backwards compatibility
 
 - Easier to manually install mods
 
 
-## Disavantages
+### Disavantages
 
 - Space efficient setups are harder to achieve with manual installation
 
