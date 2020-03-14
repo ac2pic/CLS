@@ -27,44 +27,38 @@ Allow users to create a set of mods referenceable by a name.
 
 - Increase storage usage.
 
-## Format Proposal
 
 
-## > Example Files
+## Solution 1
 
-### `load-sets.json`
-At the root of the CrossCode installation, there will be a file named `load-sets.json`. This will contain information about where all Load Sets are located relative to the root directory.
 
-```js
-{
-    "mods": {
-        "simplify-1.0.0": "/assets/mod-archive/simplify-1.0.0.ccmod",
-        "mod1-1.0.1": "/assets/mod-archive/mod1-1.0.1/",
-    },
-    "sets": {
-        "default": "/assets/mods/",
-        "name": "/path/to/mods/"
-    }
-
-}
+Folder structure
 ```
-Note: To keep backwards compatibility, `default` should always point to `/assets/mods/` 
-
-Note: Mod paths beginning with `/assets/mod-archive/` are only examples. They are not a requirement.
-
-### `mods.json`
-
-Each named load set path will have a file name `mods.json` at the root. For example, the file `/assets/mods/mod.json` will be linked to `default` load set.
-
-The contents will be a list of JSON object with the key being the mod name and the value being the version.
-
-
-```js
-[
-    "simplify-1.0.0",
-    "mod1-1.0.1"
-]
+/assets
+    /load-set
+        /foo-mods
+            /test
+            bar.ccmod
+        /bar-mods
+            foo.ccmod
+    /mods
+        a.ccmod
 ```
+
+`/assets/mods/` is the default load set.
+
+`/assets/load-set/{name}-mods/` is the `{name}` load set.
+
+## Advantages
+
+- Backwards compatibility
+
+- Easier to manually install mods
+
+
+## Disavantages
+
+- Space efficient setups are harder to achieve with manual installation
 
 
 Author: Emileyah
