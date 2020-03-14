@@ -38,16 +38,8 @@ At the root of the CrossCode installation, there will be a file named `load-sets
 ```js
 {
     "mods": {
-        "simplify": [{
-            "version": "1.0.0",
-            "packed": true,
-            "path": "/assets/mod-archive/simplify-1.0.0.ccmod"
-        }],
-        "mod1": [{
-            "version": "1.0.1",
-            "packed": false,
-            "path": "/assets/mod-archive/mod1-1.0.1/"
-        }]
+        "simplify-1.0.0": "/assets/mod-archive/simplify-1.0.0.ccmod",
+        "mod1-1.0.1": "/assets/mod-archive/mod1-1.0.1/",
     },
     "sets": {
         "default": "/assets/mods/",
@@ -68,10 +60,10 @@ The contents will be a list of JSON object with the key being the mod name and t
 
 
 ```js
-{
-    "simplify": "1.0.0",
-    "mod1": "1.0.1"
-}
+[
+    "simplify-1.0.0",
+    "mod1-1.0.1"
+]
 ```
 
 
