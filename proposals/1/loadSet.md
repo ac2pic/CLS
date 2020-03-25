@@ -53,12 +53,75 @@ Folder structure
 
 - Backwards compatibility
 
-- Easier to manually install mods
+- Easy to manually install mods
 
 
-### Disavantages
+### Disadvantages
 
 - Space efficient setups are harder to achieve with manual installation
+
+- Requires managing two separate folders
+
+
+## Solution 2
+
+Folder structure
+```
+/assets
+
+    /mods
+        /foo-mods
+            /test
+            bar.ccmod
+        /bar-mods
+            foo.ccmod
+        a.ccmod
+```
+
+
+### Advantages
+
+- Easy to manually install mods
+
+- All mods are in a single folder
+
+### Disadvantages
+
+- Space efficient setups are harder to achieve with manual installation
+
+- Harder to differentiate between mod folders and load-set folders
+
+
+## Solution 3
+
+```
+/assets
+
+    /installed-mods
+        /test-1.0.0
+        a-1.0.0.ccmod
+        bar-1.0.0.ccmod
+        foo-1.0.0.ccmod
+    /mods
+        /foo-mods
+            mod-list.json
+        /bar-mods
+            mod-list.json
+        mod-list.json
+```
+
+### Advantages
+
+- A single mod version is stored at most once
+
+- Can easily see all versions of a mod installed
+
+- 
+### Disadvantages
+
+- Tedious for manual installation/uninstallation. Near impossible for large amount of load sets.
+
+- Requires managing two folders.
 
 
 Author: Emileyah
