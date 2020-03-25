@@ -2,11 +2,8 @@
 
 ## Current situation
 
--  The hardcoded path for mod installation or discovery is `assets/mods/`. The mod must exist there to be found. 
-- Big mods that may conflict have to be individually disabled to minimize issues.
-- It is harder to find source of problem with big mods potentially messing with smaller mods.
+Mod discovery and installation is currently limited to a single directory. The only way to control whether a mod loads after restarting the game is enabling or disabling it. This is tedious when managing multiple conflicting mods.
 
-- Downgrading is impossible if one mod requires a version different from another.
 
 ## Solution
 
@@ -29,7 +26,7 @@ Allow users to create a set of mods referenceable by a name.
 
 
 
-## Solution 1
+## Option 1
 
 
 Folder structure
